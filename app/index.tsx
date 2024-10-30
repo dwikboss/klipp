@@ -10,7 +10,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text className="text-3xl">Home</Text>
+      <Text className="text-3xl">Klipp</Text>
       <Link href="/profile" style={{color: 'blue'}}>Go to Profile</Link>
     </View>
   );
