@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Link } from "expo-router";
+import { supabase } from '../lib/supabaseClient';
 import FormField from "../../components/FormField";
 import CustomButton from "../../components/CustomButton";
 
@@ -59,7 +60,7 @@ const SignIn = () => {
                             containerStyles="w-full mt-10"
                             isLoading={isSubmitting}
                         />
-                        <View className="mt-5 flex-row gap-2">
+                        <View className="mt-5 mb-5 flex-row gap-2">
                             <Text className="text-md text-zinc-500 font-pmedium">
                                 Don't have an account?
                             </Text>
