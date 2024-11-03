@@ -1,5 +1,5 @@
 import { Text, View, ScrollView } from "react-native";
-import { Link } from 'expo-router';
+import { Redirect, router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import CustomButton from '../components/CustomButton'
 
@@ -15,7 +15,7 @@ export default function Index() {
           <Text className="text-3xl text-white font-bold">custom photocards</Text>
           <CustomButton 
             title="Create!"
-            handlePress={() => {}}
+            handlePress={() => router.push('/sign-in')}
             containerStyles="w-full mt-7"
           />
         </View>
