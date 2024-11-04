@@ -1,25 +1,38 @@
-import { Text, View, ScrollView } from "react-native";
-import { Redirect, router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context'
-import CustomButton from '../components/CustomButton'
+import { Text, View, ScrollView, Image } from "react-native";
+import { Redirect, router } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
+import CustomButton from "../components/CustomButton";
 
-import { images } from '../constants'
+const Index = () => {
+    return (
+        <SafeAreaView className="bg-primary h-full">
+            <View style={{ flex: 1 }}>
+                <View style={{ flex: 3, padding: 40 }} className="justify-center items-center">
+                    <Image
+                        source={require("../assets/images/card-example.png")}
+                        resizeMode="contain"
+                        className="w-full"
+                    />
+                </View>
+                <View
+                    style={{ flex: 1 }}
+                    className="justify-center items-center"
+                >
+                    <Text className="text-white mb-5 text-7xl font-malternatesbold leading-none">
+                        klipp!
+                    </Text>
+                    <Text className="text-white mb-[25px] text-lg font-mmedium leading-none">
+                        Collect your friends
+                    </Text>
+                    <CustomButton
+                        title="Start collecting"
+                        handlePress={() => router.push("/sign-in")}
+                        containerStyles="w-1/2"
+                    />
+                </View>
+            </View>
+        </SafeAreaView>
+    );
+};
 
-export default function Index() {
-  return (
-    <SafeAreaView className="bg-primary h-full">
-      <ScrollView contentContainerStyle={{ height: '100%' }}>
-        <View className="w-full justify-start py-36 items-center h-full px-4">
-          <Text className="text-6xl text-white font-bold mb-5">Klipp</Text>
-          <Text className="text-3xl text-white font-bold">Create and collect</Text>
-          <Text className="text-3xl text-white font-bold">custom photocards</Text>
-          <CustomButton 
-            title="Create!"
-            handlePress={() => router.push('/sign-in')}
-            containerStyles="w-full mt-7"
-          />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
+export default Index;

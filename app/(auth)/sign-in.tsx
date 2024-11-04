@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Link } from "expo-router";
-import { supabase } from '../lib/supabaseClient';
 import FormField from "../../components/FormField";
 import CustomButton from "../../components/CustomButton";
 
