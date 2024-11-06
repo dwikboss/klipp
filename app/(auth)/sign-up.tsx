@@ -41,8 +41,7 @@ const SignUp = () => {
             <SafeAreaView className="bg-primary h-full">
                 <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
                     <View className="w-full justify-between pt-20 items-center h-full px-4">
-
-                    <Button title="test" onPress={testConnection} />
+                        <Button title="test" onPress={testConnection} />
                     </View>
                 </ScrollView>
             </SafeAreaView>

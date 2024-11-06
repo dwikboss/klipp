@@ -7,11 +7,11 @@ const Index = () => {
     return (
         <SafeAreaView className="bg-primary h-full">
             <View style={{ flex: 1 }}>
-                <View style={{ flex: 3, padding: 40 }} className="justify-center items-center">
+                <View style={{ flex: 3 }} className="justify-center items-center">
                     <Image
-                        source={require("../assets/images/card-example.png")}
+                        source={require("../assets/images/home-2.png")}
                         resizeMode="contain"
-                        className="w-full"
+                        className="h-full"
                     />
                 </View>
                 <View
