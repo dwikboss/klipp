@@ -9,10 +9,13 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 import FormField from "../../components/FormField";
 import CustomButton from "../../components/CustomButton";
 
 const SignIn = () => {
+    const router = useRouter();
+    
     const [form, setForm] = useState({
         email: "",
         password: "",
@@ -20,7 +23,9 @@ const SignIn = () => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const submit = () => {};
+    const submit = () => {
+        router.replace("/(tabs)/home");
+    };
 
     return (
         <KeyboardAvoidingView
